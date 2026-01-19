@@ -1,268 +1,211 @@
-# ATLAS Platform - Developer Documentation
+# Agentic Prompt Orchestration Architecture
 
-## Overview
+[![CI/CD Pipeline](https://github.com/yourusername/agentic-prompt-orchestration/actions/workflows/ci.yml/badge.svg)](https://github.com/yourusername/agentic-prompt-orchestration/actions/workflows/ci.yml)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue.svg)](https://www.typescriptlang.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-The **ATLAS (Adaptive Thought-Layer Agentic System)** platform is a comprehensive React TypeScript application demonstrating a revolutionary layered prompt architecture for advanced AI/ML systems.
+A flexible, extensible framework for orchestrating multiple AI agents to solve complex tasks through coordinated prompt chaining and intelligent workflow management.
 
-## Project Structure
+## 🚀 Features
 
-```
-atlas-platform/
-├── src/
-│   ├── components/          # React components
-│   │   ├── CognitiveStackVisualization.tsx
-│   │   ├── AgentDashboard.tsx
-│   │   ├── PromptEvolutionMonitor.tsx
-│   │   ├── TaskExecutionPanel.tsx
-│   │   └── PerformanceMetrics.tsx
-│   ├── types/              # TypeScript type definitions
-│   │   └── atlas.types.ts
-│   ├── data/               # JSON data files
-│   │   ├── prompt-templates.json
-│   │   └── execution-feedback.json
-│   ├── config/             # YAML configuration files
-│   │   ├── cognitive-layers.yaml
-│   │   └── agents.yaml
-│   ├── docs/               # Documentation
-│   │   └── README.md
-│   ├── App.tsx            # Main application component
-│   └── App.css            # Comprehensive styles
-├── package.json
-└── README.md
-```
+- **Multi-Agent Coordination**: Specialized agents (Planner, Executor, Validator, Router, Synthesizer)
+- **4 Execution Strategies**: Sequential, Parallel, Conditional, and DAG (Directed Acyclic Graph)
+- **Dynamic Task Generation**: Agents can create follow-up tasks based on outputs
+- **Template-Based Prompts**: Flexible prompt templates with variable substitution
+- **Agent Memory System**: Short-term, long-term, and working memory for each agent
+- **Validation Framework**: Custom validation rules for quality assurance
+- **Dependency Resolution**: Automatic task ordering based on dependencies
+- **Fully Typed**: Complete TypeScript implementation with comprehensive types
 
-## Core Concepts
+## 📋 Prerequisites
 
-### Five-Layer Cognitive Architecture
+- Node.js 18.x or 20.x
+- npm 9.x or higher
+- TypeScript 5.x
 
-1. **Layer 5: Meta-Cognitive Director**
-- Strategic oversight and self-reflection
-- Goal alignment and performance monitoring
-1. **Layer 4: Executive Planner**
-- Task decomposition and strategic planning
-- Resource allocation and dependency analysis
-1. **Layer 3: Working Memory Manager**
-- Context synthesis and integration
-- Memory compression and relevance filtering
-1. **Layer 2: Tool Orchestration Engine**
-- Action execution and tool coordination
-- API integration and error recovery
-1. **Layer 1: Perception & Validation**
-- Input/output verification
-- Data validation and format checking
-
-### Agent Types
-
-- **Research Agent**: Multi-step research with source verification
-- **Code Generation Agent**: Production-ready code with testing
-- **Creative Agent**: Multi-modal content generation
-- **Analyst Agent**: Data interpretation and pattern detection
-- **Strategist Agent**: High-level strategic planning
-- **Executor Agent**: Task execution and workflow orchestration
-- **Critic Agent**: Quality evaluation and improvement
-
-## Configuration Files
-
-### cognitive-layers.yaml
-
-Defines the cognitive layer architecture including:
-
-- Layer capabilities and descriptions
-- Prompt templates for each layer
-- Resource allocation settings
-- Inter-layer communication protocols
-- Performance thresholds
-
-### agents.yaml
-
-Specifies agent definitions including:
-
-- Agent capabilities (reasoning, creativity, analysis, execution, collaboration)
-- Specialized prompt templates
-- Available tools and integrations
-- Safety constraints
-- Multi-agent collaboration protocols
-
-## Data Structures
-
-### Prompt Templates (JSON)
-
-Each prompt template includes:
-
-- Unique ID and version
-- Meta-context (task type, complexity, required capabilities)
-- Core directive
-- Conditional augmentation rules
-- Constraint boundaries
-- Output specification
-- Performance metrics
-
-### Execution Feedback (JSON)
-
-Tracks task execution with:
-
-- Success metrics (completion, efficiency, satisfaction)
-- Failure points and suggested improvements
-- Aggregate performance metrics
-- Trend analysis
-
-## TypeScript Types
-
-Key type definitions in `atlas.types.ts`:
-
-```typescript
-- CognitiveLayer (enum)
-- AgentType (enum)
-- MemoryTier (enum)
-- PromptTemplate (interface)
-- AgentState (interface)
-- ExecutionFeedback (interface)
-- PerformanceMetrics (interface)
-```
-
-## Components
-
-### CognitiveStackVisualization
-
-Visual representation of the five-layer architecture with:
-
-- Layer-by-layer breakdown
-- Color-coded cognitive levels
-- Interactive hover states
-
-### AgentDashboard
-
-Agent fleet management interface showing:
-
-- Agent status and capabilities
-- Task completion statistics
-- Capability radar charts
-- Multi-agent collaboration pipelines
-
-### PromptEvolutionMonitor
-
-Prompt optimization tracking with:
-
-- Template library browser
-- Evolution metrics and generations
-- Performance comparison
-- Mutation and crossover history
-
-### TaskExecutionPanel
-
-Real-time task monitoring featuring:
-
-- Task status dashboard
-- Execution timeline visualization
-- Layer-by-layer progress tracking
-- Complexity and duration metrics
-
-### PerformanceMetrics
-
-Platform-wide analytics including:
-
-- Aggregate performance metrics
-- Trend analysis
-- Execution feedback details
-- Success criteria tracking
-
-## Styling
-
-The application uses a modern, gradient-based design system:
-
-- **Color Palette**: Purple, blue, cyan, green, orange gradients
-- **Typography**: System font stack with clear hierarchy
-- **Layout**: Responsive grid system
-- **Animations**: Smooth transitions and loading states
-- **Components**: Card-based UI with shadows and hover effects
-
-## Key Features
-
-1. **Dynamic Prompt Templating**: Adaptive prompts based on task complexity
-1. **Recursive Self-Refinement**: Agents improve their own prompts
-1. **Collaborative Synthesis**: Multiple agents contribute to prompt generation
-1. **Evolution Engine**: Genetic algorithms optimize prompt structures
-1. **Context Compression**: Intelligent memory management across tiers
-1. **Uncertainty-Aware Prompting**: Confidence calibration built-in
-1. **Multi-Layer Safety**: Constitutional principles to dynamic guardrails
-
-## Installation & Development
+## 🛠️ Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/yourusername/agentic-prompt-orchestration.git
+cd agentic-prompt-orchestration
+
 # Install dependencies
 npm install
 
-# Install required packages
-npm install --save-dev typescript @types/react @types/react-dom
-npm install react react-dom
+# Build the project
+npm run build
+```
 
-# Start development server
+## 🏃 Quick Start
+
+```typescript
+import { createOrchestrationSystem } from './index';
+
+// Initialize the system
+const { templateEngine, orchestrator, agents } = createOrchestrationSystem();
+
+// Load workflow configurations
+const workflowConfig = require('./workflows.json');
+templateEngine.loadFromJSON(workflowConfig);
+
+// Create and register agents
+const planner = agents.createPlanner({
+  id: 'planner-agent',
+  role: 'planner',
+  name: 'Task Planner',
+  description: 'Plans and organizes tasks',
+  capabilities: ['planning']
+});
+
+orchestrator.registerAgent(planner);
+
+// Execute a workflow
+const context = {
+  conversationId: 'session-001',
+  variables: { topic: 'AI Research' },
+  history: [],
+  state: {}
+};
+
+const results = await orchestrator.executeWorkflow('research-workflow', context);
+console.log(results);
+```
+
+## 📖 Documentation
+
+- [Complete Guide](README.mdx) - Comprehensive documentation with examples
+- [Usage Guide](USAGE_GUIDE.mdx) - Practical patterns and best practices
+- [Architecture](ARCHITECTURE.md) - System design and component interactions
+
+## 🧪 Testing
+
+```bash
+# Run all tests
+npm test
+
+# Run tests with coverage
+npm test -- --coverage
+
+# Run tests in watch mode
+npm test -- --watch
+```
+
+## 🔧 Development
+
+```bash
+# Run in development mode
 npm run dev
+
+# Run linter
+npm run lint
+
+# Format code
+npm run format
 
 # Build for production
 npm run build
 ```
 
-## Technology Stack
+## 📁 Project Structure
 
-- **Framework**: React 18+
-- **Language**: TypeScript
-- **Data Formats**: JSON, YAML, Markdown
-- **Styling**: CSS3 with CSS Variables
-- **Build Tool**: Vite/Webpack
+```
+├── types.ts                    # Type definitions
+├── PromptTemplateEngine.ts     # Template rendering engine
+├── agents.ts                   # Agent implementations
+├── orchestrator.ts             # Workflow orchestration
+├── index.ts                    # Main entry point
+├── example.ts                  # Example application
+├── workflows.json              # Workflow configurations
+├── advanced-workflow.json      # Advanced workflow example
+├── __tests__/                  # Test files
+│   └── PromptTemplateEngine.test.ts
+├── .github/
+│   └── workflows/
+│       └── ci.yml              # GitHub Actions CI/CD
+└── README.md                   # This file
+```
 
-## Performance Metrics
+## 🔄 CI/CD Pipeline
 
-Target performance criteria:
+This project uses GitHub Actions for continuous integration and deployment:
 
-- ✅ 40% improvement in complex task completion
-- ✅ 99.9% safety compliance rate
-- ✅ Sub-second prompt adaptation time
-- ✅ 90%+ user satisfaction
+- **Build**: Compiles TypeScript and creates distribution files
+- **Test**: Runs unit tests with coverage reporting
+- **Lint**: Checks code quality with ESLint and Prettier
+- **Multi-Node**: Tests against Node.js 18.x and 20.x
 
-## Future Enhancements
+## 🤝 Contributing
 
-### Phase 1 (Months 1-6)
+1. Fork the repository
+1. Create a feature branch (`git checkout -b feature/amazing-feature`)
+1. Commit your changes (`git commit -m 'Add amazing feature'`)
+1. Push to the branch (`git push origin feature/amazing-feature`)
+1. Open a Pull Request
 
-- Core five-layer architecture implementation
-- Basic prompt evolution engine
-- Single-agent capabilities
+## 📝 Example Workflows
 
-### Phase 2 (Months 7-12)
+### Research Pipeline
 
-- Multi-agent collaboration framework
-- Advanced context compression
-- Prompt marketplace
+```typescript
+const researchWorkflow = {
+  id: 'research-pipeline',
+  strategy: { type: 'dag', config: {} },
+  tasks: [
+    { id: 'plan', agentId: 'planner' },
+    { id: 'research', agentId: 'researcher', dependencies: ['plan'] },
+    { id: 'validate', agentId: 'validator', dependencies: ['research'] },
+    { id: 'synthesize', agentId: 'synthesizer', dependencies: ['validate'] }
+  ]
+};
+```
 
-### Phase 3 (Months 13-18)
+### Content Creation
 
-- Self-improving prompt optimization
-- Cross-platform integration
-- Enterprise security features
+```typescript
+const contentWorkflow = {
+  id: 'content-creation',
+  strategy: { type: 'parallel', config: { maxConcurrency: 3 } },
+  tasks: [
+    { id: 'intro', agentId: 'writer-1' },
+    { id: 'body', agentId: 'writer-2' },
+    { id: 'conclusion', agentId: 'writer-3' },
+    { id: 'edit', agentId: 'editor', dependencies: ['intro', 'body', 'conclusion'] }
+  ]
+};
+```
 
-### Phase 4 (Months 19-24)
+## 🐛 Troubleshooting
 
-- Multimodal prompt architectures
-- Real-time learning and adaptation
-- Federated prompt learning
+### Common Issues
 
-## Contributing
+**Issue: “Dependencies lock file is not found”**
 
-This is a demonstration platform showcasing advanced AI/ML architecture concepts. Contributions should focus on:
+- Solution: Run `npm install` to generate `package-lock.json`
 
-- Enhancing visualization components
-- Adding new agent types
-- Improving prompt template structures
-- Optimizing performance metrics
+**Issue: “Agent not found”**
 
-## License
+- Solution: Ensure agents are registered before executing workflows
 
-MIT License - See LICENSE file for details
+**Issue: “Circular dependency detected”**
 
-## Contact
+- Solution: Review task dependencies to ensure they form a DAG
 
-For questions or collaboration opportunities regarding the ATLAS platform architecture, please refer to the project documentation.
+## 📜 License
+
+This project is licensed under the MIT License - see the <LICENSE> file for details.
+
+## 🙏 Acknowledgments
+
+- Built with TypeScript for type safety
+- Inspired by multi-agent AI systems research
+- Designed for extensibility and real-world use cases
+
+## 📧 Contact
+
+- GitHub: [@yourusername](https://github.com/yourusername)
+- Issues: [GitHub Issues](https://github.com/yourusername/agentic-prompt-orchestration/issues)
 
 -----
 
-**Built with ⚡ ATLAS - Adaptive Thought-Layer Agentic System**
+**Built with ❤️ for the AI agent community**
