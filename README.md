@@ -1,6 +1,6 @@
 # Agentic Prompt Orchestration Architecture
 
-[![CI/CD Pipeline](https://github.com/yourusername/agentic-prompt-orchestration/actions/workflows/ci.yml/badge.svg)](https://github.com/yourusername/agentic-prompt-orchestration/actions/workflows/ci.yml)
+[![CI/CD Pipeline](https://github.com/NeuralBlitz/agentic-prompt-orchestration/actions/workflows/ci.yml/badge.svg)](https://github.com/NeuralBlitz/agentic-prompt-orchestration/actions/workflows/ci.yml)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue.svg)](https://www.typescriptlang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -27,7 +27,7 @@ A flexible, extensible framework for orchestrating multiple AI agents to solve c
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/agentic-prompt-orchestration.git
+git clone https://github.com/NeuralBlitz/agentic-prompt-orchestration.git
 cd agentic-prompt-orchestration
 
 # Install dependencies
@@ -203,8 +203,8 @@ This project is licensed under the MIT License - see the <LICENSE> file for deta
 
 ## 📧 Contact
 
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Issues: [GitHub Issues](https://github.com/yourusername/agentic-prompt-orchestration/issues)
+- GitHub: [@NeuralBlitz](https://github.com/NeuralBlitz)
+- Issues: [GitHub Issues](https://github.com/NeuralBlitz/agentic-prompt-orchestration/issues)
 
 -----
 
