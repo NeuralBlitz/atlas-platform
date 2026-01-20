@@ -1,7 +1,6 @@
 # Agentic Prompt Orchestration Architecture
 
-[![CI/CD Pipeline](https://github.com/NeuralBlitz/agentic-prompt-orchestration/actions/workflows/ci.yml/badge.svg)
-[Worflow](https://github.com/NeuralBlitz/agentic-prompt-orchestration/actions/workflows/ci.yml)
+
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue.svg)](https://www.typescriptlang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
